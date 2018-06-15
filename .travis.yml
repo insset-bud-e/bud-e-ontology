@@ -1,3 +1,11 @@
+language: python
+python:
+  - "3.5"
+install:
+  - pip install -r requirements.txt
+  # command to run tests
+script:
+  - py.run # or py.test for Python versions 3.5 and below
 deploy:
   provider: heroku
   api_key:
@@ -5,11 +13,4 @@ deploy:
   app: bud-e-ontology
   on:
     repo: insset-bud-e/bud-e-ontology
-  language: python
-  python:
-    - "3.5"
-  install:
-    - pip install -r requirements.txt
-    # command to run tests
-  script:
-    - py.run # or py.test for Python versions 3.5 and below
+  
